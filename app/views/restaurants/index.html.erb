@@ -1,0 +1,10 @@
+<h1>All my fav restaurants 🥑</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <h3><%= link_to restaurant.name, restaurant_path(restaurant), class: "btn btn-primary" %> </h3>
+  <p> 🚲 <%= restaurant.address %>  </p>
+  <p>🍴 <%= restaurant.category %> food </p>
+<% end %>
+<br>
+
+<p>➡️<%= link_to "+ add a new restaurant", new_restaurant_path %></p>
